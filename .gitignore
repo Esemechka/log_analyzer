@@ -1,3 +1,4 @@
 .idea
 folder_for_test/myapp.log
 folder_for_test/report-2020.03.09.html
+__pycache__
