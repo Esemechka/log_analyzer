@@ -1,4 +1,6 @@
-class TestSum(unittest.TestCase):
+import unittest
+from log_analyzer import find_most_actual, form_table_for_template
+class TestLogAnalyzer(unittest.TestCase):
 
     def test_find_most_actual(self):
         """
@@ -7,7 +9,7 @@ class TestSum(unittest.TestCase):
         """
         log_dir_test = './folder_for_actual_file_search_test/'
         result = find_most_actual(log_dir_test)
-        self.assertEqual(t.date, '2020.03.09')
+        self.assertEqual(result.date, '2020.03.09')
 
     def test_on_empty_file(self):
         """

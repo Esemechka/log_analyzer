@@ -79,7 +79,7 @@ def xreadlines(log_path):
     if total != 0:
         calc_share = global_cnt_sum/total*100
     else:
-        calc_share = 1
+        calc_share = 100
     if calc_share < 50:
         raise Exception(f'The value of unprocessed lines is{calc_share}')
     else:
@@ -116,7 +116,8 @@ def load_html(file_most_actual, metrics, report_dir):
     logging.info('starting creating html')
     html_template = Template(codecs.open("report.html", 'r').read())
     html_save = html_template.safe_substitute(table_json=str(metrics))
-    table_sorter_addr = "./jquery.tablesorter.min.js"
+    table_sorter_addr = "C:/Users/E.Semichasnova/PycharmProjects/log_analyzer/\
+    jquery.tablesorter.min.js"
     html_save = html_save.replace("jquery.tablesorter.min.js", table_sorter_addr)
     date_most_actual = file_most_actual.date
     filename = f'report-{date_most_actual}.html'
@@ -166,4 +167,5 @@ def main(log_dir, report_dir, report_size):
 
 
 if __name__ == "__main__":
+    logging.info('main is run!!!')
     main(real_args['LOG_DIR'], real_args['REPORT_DIR'], real_args['REPORT_SIZE'])
