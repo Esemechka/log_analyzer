@@ -14,7 +14,7 @@ from string import Template
 config = {
     "REPORT_SIZE": 1000,
     "REPORT_DIR": "./reports",
-    "LOG_DIR": "./log"
+    "LOG_DIR": None
 }
 
 parser = ArgumentParser()
@@ -29,7 +29,7 @@ for key in config.keys():
 
 log_format = '[%(asctime)s] %(levelname).1s %(message)s'
 logging.basicConfig(level=logging.DEBUG,
-                    filename=path.join(real_args['LOG_DIR'], 'myapp.log'),
+                    filename=real_args['LOG_DIR'],
                     format=log_format,
                     datefmt='%Y.%m.%d %H:%M:%S')
 

@@ -1,5 +1,5 @@
 {
     "REPORT_SIZE": 1000,
     "REPORT_DIR": "./folder_for_test",
-    "LOG_DIR": "./folder_for_test"
+    "LOG_DIR": "./folder_for_test/.log"
 }
