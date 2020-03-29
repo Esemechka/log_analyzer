@@ -2,7 +2,7 @@
 
 Command to run script:
 
-python log_analyzer.py --config="./folder_for_actual_file_search_test/config_test.txt"
+python log_analyzer.py --config="./folder_for_test/config_test.txt"
  
 Command to run test:
 
